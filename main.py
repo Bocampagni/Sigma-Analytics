@@ -3,17 +3,23 @@ import yfinance as yf
 import matplotlib.pyplot as plt
 import json
 
-ticker = yf.Ticker('TSLA')
-tsla_df = ticker.history(period="max")
-tsla_df["Close"].plot(title="TSLA's stock price")
+tickers = yf.Tickers('TSLA GOOG AAPL')
 
-#tsla_df.iloc[::-1].to_csv(path_or_buf ="tesla.csv")
+#Getting info
+#Alocar em uma variavel o endereço de memória do objeto da iteração
+#Alocar em uma variavel o .info da iteração
 
-#creating info text file
-file = open('info.txt','w')
-dumped = json.dumps(ticker.info)
+keys = ["longBusinessSummary", "city", "state", "country","industry","currency"]
 
-file.write(dumped)
+tickers_info = []
+for ticker in tickers.tickers:
+   present_ticker = ticker
+   info = ticker.info
+   present_dict = {x:info[x] for x in keys}
+   tickers_info.append([present_ticker, present_dict])
+
+print(tickers_info)
+   
 
 
-#plt.show()
+
