@@ -2,22 +2,26 @@ import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 from info import getInfo
-from openpyxl import load_workbook
-from openpyxl.styles import Font
-from openpyxl.chart import BarChart, Reference
 
 tickers = yf.Tickers('TSLA GOOG AAPL')
 tickers_info = getInfo(tickers)
 
-tickers_info[0][0].history(period="2d")["Open"].plot(figsize=(16,9))
-# plt.subplot().bar(tickers_info[0][0].history(period="2d")["Open"])
-plt.show()
+#Matriz 2d, primeiro 0 corresponde a primeira lista, segundo zero corresponde ao primeiro elemento da primeira lista (Ticker)
+for x in range(3):
+    tickers_info[x][0].history(period="7d").to_csv("stockData.csv",mode='a', header=False)
 
+#Adicionar um separador no csv para sabermos exatamente o IOF do ticker
 
+#Adicionar gráficos dentro do csv para cada ticker
 
-# Dados do dia
-# Dados da semana
-# Dados do mês
-# Dados do ano
-# Dados dos últimos 5 anos
-# Dados desde o começo
+#Enviar o email
+
+#Fazer ser no-hup 
+
+#Fazer ser um script que rode na abertura do mercado (Pegar horário da abertura do Bovespa)
+
+#Implementar paralelismo para o yf.Tickers()
+
+#EXTRAS#
+# Dados da semana (Toda sexta)
+# Dados do mês (Todo fim de mês)
