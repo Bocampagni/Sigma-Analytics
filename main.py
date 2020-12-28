@@ -8,6 +8,16 @@ tickers = yf.Tickers('TSLA GOOG AAPL')
 tickers_info = getInfo(tickers)
 data = fetchTickers(tickers_info,3).to_csv("stockData.csv")
     
+
+
+
+
+
+
+
+
+
+
 #Adicionar gráficos dentro do csv para cada ticker
 
 #Enviar o email
@@ -15,6 +25,7 @@ data = fetchTickers(tickers_info,3).to_csv("stockData.csv")
 #Fazer ser no-hup 
 
 #Fazer ser um script que rode na abertura do mercado (Pegar horário da abertura do Bovespa)
+#^10hrs -> 18h
 
 #Implementar paralelismo para o yf.Tickers()
 
