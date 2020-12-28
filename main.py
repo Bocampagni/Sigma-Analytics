@@ -1,28 +1,19 @@
 import pandas as pd
 import yfinance as yf
-import matplotlib.pyplot as plt
-from info import getInfo
-from sincronousExtractor import fetchTickers
 
-tickers = yf.Tickers('TSLA GOOG AAPL')
-tickers_info = getInfo(tickers)
-data = fetchTickers(tickers_info,3).to_csv("stockData.csv")
-    
+stockNames = 'TSLA GOOG AAPL'
+stockList = stockNames.split(" ")
 
+tickers = yf.Tickers(stockNames)
 
+data = []
+for ticker in tickers.tickers:
+    data.append(ticker.history(period="7d"))
 
+for x in range(len(stockList)):
+    data[x] = data[x].reset_index()
+    data[x].to_json(stockList[x]+".json",orient="records",date_format="iso")
 
-
-
-
-
-
-
-#Adicionar gráficos dentro do csv para cada ticker
-
-#Enviar o email
-
-#Fazer ser no-hup 
 
 #Fazer ser um script que rode na abertura do mercado (Pegar horário da abertura do Bovespa)
 #^10hrs -> 18h
