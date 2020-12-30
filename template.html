@@ -35,18 +35,30 @@
 <body>
     <div id="chart"></div>
     <script>
-        tickers = []
+        
+
+        format = []
         tickerData.map((value,index) => {
-            tickers.push(value[0].Ticker)
+            format.push(value[1])
         })
 
+        date = []
+        format[0].map((value,index) => {
+            unformatedDate = value.Date
+            date.push(new Date(unformatedDate))
 
-        console.log(tickers)
+        })
+
+        console.log(date)
+
+
+
+
 
 
 
         const data = {
-        labels: tickers,
+        labels: date,
 
         datasets: [
             {
