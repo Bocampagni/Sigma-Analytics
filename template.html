@@ -38,18 +38,24 @@
         
 
         format = []
+        console.log(tickerData[0][0])
         tickerData.map((value,index) => {
             format.push(value[1])
         })
 
-        date = []
+        var date = []
+        var open = []
+        var close = []
         format[0].map((value,index) => {
             unformatedDate = value.Date
             date.push(new Date(unformatedDate))
+            open.push(value.Open)
+            close.push(value.Close)
+            
 
         })
 
-        console.log(date)
+        console.log(open)
 
 
 
@@ -62,19 +68,19 @@
 
         datasets: [
             {
-                name: "Some Data", type: "bar",
-                values: [25, 40, 30]
+                name: "Open", type: "bar",
+                values: open
             },
             {
-                name: "Another Set", type: "line",
-                values: [25, 50, -10]
+                name: "Close", type: "line",
+                values: close
             }
         ]
     }
     
     const chart = new frappe.Chart("#chart", {  // or a DOM element,
                                                 // new Chart() in case of ES6 module with above usage
-        title: "My Awesome Chart",
+        title: tickerData[0][0].Ticker,
         data: data,
         type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
         height: 250,
