@@ -31,61 +31,87 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <title>Sigma</title>
+    <link rel="stylesheet" href="template.css">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
 </head>
-<body>
-    <div id="chart"></div>
+
+
+
+    <body>    
+    <div id="sigma">
+        <div>
+            <div id="text">
+                 <h1>Sigma Analitycs</h1>
+            </div>
+            <p>Your daily stock market data analysis report</p>
+        </div>
+        <img src="banner.png" alt="">
+    </div>
+    <div id="container"></div>
     <script>
-        
-
-        format = []
-        console.log(tickerData[0][0])
         tickerData.map((value,index) => {
-            format.push(value[1])
-        })
+            var div = document.createElement("div");
+            div.style.width = "100%";
+            div.style.height = "40%";
+            div.innerHTML = value[0].Ticker;
+            div.classList.add("ticker");
+            div.id = value[0].Ticker
+            document.getElementById("container").appendChild(div);
 
-        var date = []
-        var open = []
-        var close = []
-        format[0].map((value,index) => {
-            unformatedDate = value.Date
-            date.push(new Date(unformatedDate))
-            open.push(value.Open)
-            close.push(value.Close)
-            
+            format = []
+            tickerData.map((value,index) => {
+                format.push(value[1])
+            })
 
-        })
+            var date = []
+            var open = []
+            var close = []
+            format[0].map((value,index) => {
+                unformatedDate = new Date(value.Date)
+                date.push(unformatedDate.toString().substring(0,15))
+                open.push(value.Open)
+                close.push(value.Close)
+                
 
-        console.log(open)
-
-
-
-
-
+            })
 
 
-        const data = {
-        labels: date,
+            const data = {
+            labels: date,
 
-        datasets: [
-            {
-                name: "Open", type: "bar",
-                values: open
-            },
-            {
-                name: "Close", type: "line",
-                values: close
+            datasets: [
+                {
+                    name: "Open", type: "bar",
+                    values: open
+                },
+                {
+                    name: "Close", type: "line",
+                    values: close
+                }
+            ]
             }
-        ]
-    }
-    
-    const chart = new frappe.Chart("#chart", {  // or a DOM element,
+            const chart = new frappe.Chart("#"+value[0].Ticker, {  // or a DOM element,
                                                 // new Chart() in case of ES6 module with above usage
-        title: tickerData[0][0].Ticker,
-        data: data,
-        type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
-        height: 250,
-        colors: ['#7cd6fd', '#743ee2']
-    })
+                title: value[0].Ticker,
+                data: data,
+                type: 'axis-mixed', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
+                height: 250,
+                colors: ['#7cd6fd', '#743ee2']
+            })
+
+        })
+
+
+
+
+
+
+
+
+
+        
+    
+
     </script>
 
 </body>

@@ -1,0 +1,40 @@
+body {    
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: rgb(214, 214, 247) ;
+}
+#sigma {
+    background-image: linear-gradient(rgb(169, 166, 194), rgb(214, 214, 247));
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 70px;
+    text-shadow: 2px 2px 4px grey;
+    margin-bottom: 0px;
+    margin-top: 80px;
+    
+
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    margin-left: 10%;
+    margin-top: 0px;
+    font-family: 'Cardo', serif;
+    text-shadow: 2px 2px 4px grey;
+}
