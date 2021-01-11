@@ -1,0 +1,19 @@
+{
+  "name": "sigma",
+  "version": "1.0.0",
+  "description": "Stock market daily report",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bocampagni/Sigma-Analytics.git"
+  },
+  "author": "Fábio Alves Bocampagni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bocampagni/Sigma-Analytics/issues"
+  },
+  "homepage": "https://github.com/Bocampagni/Sigma-Analytics#readme"
+}
