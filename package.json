@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/Bocampagni/Sigma-Analytics/issues"
   },
-  "homepage": "https://github.com/Bocampagni/Sigma-Analytics#readme"
+  "homepage": "https://github.com/Bocampagni/Sigma-Analytics#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "dotenv": "^8.2.0",
+    "email-templates": "^8.0.3",
+    "handlebars": "^4.7.6",
+    "nodemailer": "^6.4.17",
+    "nodemailer-express-handlebars": "^4.0.0",
+    "nodemailer-handlebars": "^1.0.1"
+  }
 }
