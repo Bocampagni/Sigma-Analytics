@@ -67,12 +67,11 @@
             var open = []
             var close = []
             format[0].map((value,index) => {
-                unformatedDate = new Date(value.Date)
-                date.push(unformatedDate.toString().substring(0,15))
+                date.push(value.Date.toString().substring(0,10))
                 open.push(value.Open)
                 close.push(value.Close)
                 
-
+                console.log(date)
             })
 
 
