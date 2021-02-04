@@ -23,12 +23,12 @@
     <img src="banner.png">
   </a>
 
-  <h3 align="center">Sigma Analytics</h3>
+  <h1 align="center">Sigma Analytics</h1>
 
-  <p align="center">
+  <h3 align="center">
     Your daily stock market data analysis report
 
-  </p>
+  </h3>
 
 
 
