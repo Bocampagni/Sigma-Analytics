@@ -1,6 +1,7 @@
+[![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
+[![Issues][issues-shield]][issues-url]
 
 
 <!-- PROJECT LOGO -->
@@ -104,6 +105,9 @@ Fábio Alves Bocampagni - [@Linkedin](https://www.linkedin.com/in/bocampagni/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[issues-shield]: https://img.shields.io/github/issues/bocampagni/Sigma-Analytics.svg?style=for-the-badge
+[issues-url]: https://github.com/bocampagni/Sigma-Analytics/issues
+[stars-shield]: https://img.shields.io/github/stars/bocampagni/Sigma-Analytics.svg?style=for-the-badge
 [stars-url]: https://github.com/Bocampagni/Sigma-Analytics/stargazers
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/Bocampagni/Sigma-Analytics/blob/master/LICENSE.TXT
