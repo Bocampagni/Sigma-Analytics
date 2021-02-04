@@ -1,16 +1,3 @@
-
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Stargazers][stars-shield]][stars-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
@@ -62,9 +49,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Sigma Analytics is your daily stock market data analysis report. It was built under Yahoo Finance API, and aims to give you a useful insight of your stocks, whenever you want.
+Sigma Analytics is your daily stock market data analysis report. With Sigma, you are able to analise your stock data in a range of seven days.
 
-You can select as much ticket as you want to analise under a range of seven days.
+Built under Yahoo Finance API, this project aims to give you an easy way to visualize and make useful insights on your stock data.
+
 
 
 
@@ -116,7 +104,6 @@ Fábio Alves Bocampagni - [@Linkedin](https://www.linkedin.com/in/bocampagni/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
 [stars-url]: https://github.com/Bocampagni/Sigma-Analytics/stargazers
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/Bocampagni/Sigma-Analytics/blob/master/LICENSE.TXT
